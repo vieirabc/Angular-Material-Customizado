@@ -1,0 +1,39 @@
+/* 1rem == 16px; */
+
+// Sidenav
+.mat-sidenav-container {
+  .mat-sidenav {}
+
+  .mat-sidenav-content {
+    height: 100vh;
+
+    padding-top: 2.5rem;
+    box-sizing: border-box;
+  }
+}
+
+// Toolbar
+.mat-toolbar {
+  position: fixed;
+  z-index: 999;
+
+  &.mat-toolbar-single-row {
+    max-height: 2.5rem;
+  }
+
+  // Button, Raised-Button, Stroked-Button, Flat-Button
+  .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
+    height: 100%;
+    min-width: auto;
+    padding: 0 .75rem;
+  }
+}
+
+/* Button */
+
+// Button, Raised-Button, Stroked-Button, Flat-Button
+.mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
+  &.mat-noradius {
+    border-radius: 0;
+  }
+}

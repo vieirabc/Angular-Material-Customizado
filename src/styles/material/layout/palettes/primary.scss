@@ -1,0 +1,25 @@
+$palette: (
+  50: #feecef,
+  100: #fdd0d5,
+  200: #ec9fa0,
+  300: #e27b7c,
+  400: #ed5e5c,
+  500: #f15144,
+  600: #e34843,
+  700: #d13f3d,
+  800: #c33936,
+  900: #b4312b,
+
+  contrast: (
+    50: darken(#b4312b, 25%),
+    100: darken(#b4312b, 25%),
+    200: darken(#b4312b, 25%),
+    300: darken(#b4312b, 25%),
+    400: darken(#b4312b, 25%),
+    500: #feecef,
+    600: #feecef,
+    700: #feecef,
+    800: #feecef,
+    900: #feecef,
+  ),
+)

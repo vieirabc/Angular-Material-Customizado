@@ -1,0 +1,27 @@
+.__flex {
+  display: flex;
+  &\/column { @extend .__flex; flex-direction: column;
+    &\/centred { @extend .__flex\/column, .__flex\/centred;
+      &\/auto { @extend .__flex\/column\/centred, .__flex\/auto; }
+    }
+  }
+  &\/centred { @extend .__flex; align-items: center; justify-content: center;
+    &\/auto { @extend .__flex\/centred, .__flex\/auto; }
+  }
+  &\/auto { @extend .__flex; flex: 1 1 auto; }
+}
+
+.__middle { vertical-align: middle; }
+.__pointer { cursor: pointer; }
+
+.__nopointer { cursor: auto; }
+.__nolist { list-style: none; }
+.__nolink { text-decoration: none; }
+.__noselect {
+  -webkit-touch-callout: none; // iOS Safari
+    -webkit-user-select: none; // Safari
+     -khtml-user-select: none; // Konqueror HTML
+       -moz-user-select: none; // Old versions of Firefox
+        -ms-user-select: none; // Internet Explorer/Edge
+            user-select: none; // Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
+}

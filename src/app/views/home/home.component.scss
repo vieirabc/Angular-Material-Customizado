@@ -1,0 +1,61 @@
+@use 'src/styles/material/material' as base;
+
+.home {
+  padding-top: 4rem;
+  gap: .75rem;
+
+  .logotype {
+    $size: 4.5rem;
+    gap: .25rem;
+    .solid {
+      overflow: hidden;
+      width: $size;
+      height: $size;
+
+      .moon {
+        background-color: base.getColor(500, accent);
+      }
+    }
+
+    .s-left {
+
+      .div {
+        width: 0;
+        height: 0;
+      }
+      .bottom {
+        border: solid calc($size/2) base.getColor(500, accent);
+        border-top-color: transparent;
+        border-top-width: $size;
+        border-bottom-width: 0;
+      }
+    }
+
+    .s-right {
+      gap: .25rem;
+      border-radius: 50%;
+
+      .moon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .welcome-text {
+    max-width: 720px;
+    gap: .75rem;
+
+    padding: 2rem;
+    padding-top: 3.25rem;
+    box-sizing: border-box;
+
+    border: solid 1px;
+    border-color: transparent base.getColor();
+
+    * {
+      line-height: 1.25;
+      text-align: justify;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use '@angular/material' as mat;
+@use '../layout/palettes/primary' as primary;
+@use '../layout/palettes/accent' as accent;
+
+$palettes: (
+  // Define the palettes for your theme using the Material Design palettes available in palette.scss
+  // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+  // hue. Available color palettes: https://material.io/design/color/
+  primary: ( mat.define-palette(primary.$palette) ),
+  accent: ( mat.define-palette(accent.$palette) ),
+
+  // The warn palette is optional (defaults to red).
+  warn: mat.define-palette(mat.$red-palette),
+);
+
+// Return the specified Palette
+@function get($key, $map: $palettes) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  }
+
+  @return null;
+}
+
+// // Return the specified Color of the Palette
+// @function getColor($color: 500, $palette: primary) {
+//   @if get($palette) != null {
+//     @if map-has-key(get($palette), $color) {
+//       @return map-get(get($palette), $color );
+//     }
+//   }
+//   @return null;
+// }
+
+// // Return the ContrastColor of the specified Color
+// @function getContrast($color: 500, $palette: primary) {
+//   @if get($palette) != null {
+//     $map: map-get(get($palette), contrast);
+
+//     @if map-has-key($map, $color) {
+//       @return map-get($map, $color);
+//     }
+//   }
+//   @return null;
+// }
+
+// // Sets the 'background-color' to the specified Color and automatically sets the 'color' to the ContrastColor
+// @mixin setThemeConfig($color: 500, $palette: primary) {
+//   background-color: getColor($color, $palette);
+//   color: getContrast($color, $palette);
+//   * { color: getContrast($color, $palette); }
+// }

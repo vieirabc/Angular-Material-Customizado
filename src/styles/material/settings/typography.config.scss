@@ -1,0 +1,132 @@
+@use '@angular/material' as mat;
+@use '../layout/typographys/typography' as typography;
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+// font-family: 'Comforaa', sans-serif;
+
+$font-family: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  font-family: $font-family;
+  font-size: 16px;
+}
+
+@function get() {
+  @return typography.get();
+}
+
+@function generateFont($level) {
+  @return unquote('#{mat.font-weight(typography.get(), $level)} #{mat.font-size(typography.get(), $level)}/#{mat.line-height(typography.get(), $level)} #{mat.font-family(typography.get(), $level)}');
+}
+
+@mixin all-classes() {
+  .mat-display-4, .mat-typography .mat-display-4 {
+    font: generateFont(display-4);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(display-4);
+      margin: 0;
+    }
+  }
+  .mat-display-3, .mat-typography .mat-display-3 {
+    font: generateFont(display-3);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(display-3);
+      margin: 0;
+    }
+  }
+  .mat-display-2, .mat-typography .mat-display-2 {
+    font: generateFont(display-2);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(display-2);
+      margin: 0;
+    }
+  }
+  .mat-display-1, .mat-typography .mat-display-1 {
+    font: generateFont(display-1);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(display-1);
+      margin: 0;
+    }
+  }
+
+  .mat-h1, .mat-headline, .mat-typography .mat-h1, .mat-typography .mat-headline, .mat-typography h1 {
+    font: generateFont(headline);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(headline);
+      margin: 0;
+    }
+  }
+  .mat-h2, .mat-title, .mat-typography .mat-h2, .mat-typography .mat-title, .mat-typography h2 {
+    font: generateFont(title);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(title);
+      margin: 0;
+    }
+  }
+  .mat-h3, .mat-subheading-2, .mat-typography .mat-h3, .mat-typography .mat-subheading-2, .mat-typography h3 {
+    font: generateFont(subheading-2);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(subheading-2);
+      margin: 0;
+    }
+  }
+  .mat-h4, .mat-subheading-1, .mat-typography .mat-h4, .mat-typography .mat-subheading-1, .mat-typography h4 {
+    font: generateFont(subheading-1);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(subheading-1);
+      margin: 0;
+    }
+  }
+  .mat-body-strong, .mat-body-2, .mat-typography .mat-body-strong, .mat-typography .mat-body-2 {
+    font: generateFont(body-2);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(body-2);
+      margin: 0;
+    }
+  }
+  .mat-body, .mat-body-1, .mat-typography .mat-body, .mat-typography .mat-body-1, .mat-typography {
+    font: generateFont(body-1);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(body-1);
+      margin: 0;
+    }
+  }
+
+  .mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+    font: generateFont(button);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(button);
+      margin: 0;
+      @media screen and (max-width: 720px) {
+        font-size: .75rem;
+      }
+    }
+  }
+
+  .mat-small, .mat-caption, .mat-typography .mat-small, .mat-typography .mat-caption {
+    font: generateFont(caption);
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(caption);
+      margin: 0;
+    }
+  }
+  .mat-form-field {
+    font: generateFont(input); font-size: inherit;
+    margin: 0;
+    *:not(.mat-ico) {
+      font: generateFont(input); font-size: inherit;
+      margin: 0;
+    }
+  }
+}

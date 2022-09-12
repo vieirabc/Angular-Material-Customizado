@@ -1,0 +1,28 @@
+@use '@angular/material' as mat;
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+$font-family: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+$typography: mat.define-typography-config(
+  $display-4: mat.define-typography-level( 8rem, 1, 300, $font-family, -0.05em ),
+  $display-3: mat.define-typography-level( 4rem, 1, 300, $font-family, -0.02em ),
+  $display-2: mat.define-typography-level( 3rem, 3.24rem, 300, $font-family, -0.005em ),
+  $display-1: mat.define-typography-level( 2rem, 2.5rem, 300, $font-family, normal ),
+
+  $headline: mat.define-typography-level( 1.75rem, 2rem, 400, $font-family, normal ),
+  $title: mat.define-typography-level( 1.5rem, 1.75rem, 500, $font-family, normal ),
+  $subheading-2: mat.define-typography-level( 1.25rem, 1.5rem, 500, $font-family, normal ),
+  $subheading-1: mat.define-typography-level( 1.125rem, 1.5rem, 500, $font-family, normal ),
+
+  $body-1: mat.define-typography-level( 1rem, 1.25, 500, $font-family, normal ),
+  $body-2: mat.define-typography-level( 1rem, 1.25, 700, $font-family, normal ),
+
+  $caption: mat.define-typography-level( .75rem, 1rem, 500, $font-family, normal ),
+
+  $button: mat.define-typography-level( .875rem, 1rem, 600, $font-family, normal ),
+  $input: mat.define-typography-level( inherit, 1.125, 500, $font-family, normal ),
+);
+
+@function get() {
+  @return $typography;
+}

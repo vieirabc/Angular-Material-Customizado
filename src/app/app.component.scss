@@ -1,0 +1,12 @@
+@use 'src/styles/material/material' as base;
+
+.toolbar {
+  gap: .5rem;
+
+  padding: 0;
+}
+
+.content {
+  background-color: base.getColor(50);
+  color: base.getContrast(50);
+}

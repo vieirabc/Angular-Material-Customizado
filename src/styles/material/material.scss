@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+
+// Settings
+@use './settings/palette.config' as palette;
+@use './settings/typography.config' as typography;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import './layout/material-icons';
+@import './material-components';
+
+html, body { height: 100%; }
+* { margin: 0; padding: 0; }
+
+@include mat.core();
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: palette.get(primary),
+    accent: palette.get(accent),
+    warn: palette.get(warn),
+  ),
+  typography: typography.get()
+));
+
+@function getColor($color: 500, $palette: primary) {
+  @return mat.get-color-from-palette(palette.get($palette), $color);
+}
+@function getContrast($color: 500, $palette: primary) {
+  @return mat.get-color-from-palette(palette.get($palette), #{$color}-contrast);
+}
+@mixin setTemplate($color: 500, $palette: primary) {
+  background-color: getColor(palette.get($palette), $color);
+  color: getColor(palette.get($palette), #{$color}-contrast);
+  * { color: getColor(palette.get($palette), #{$color}-contrast); }
+}
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($custom-theme);
+@include typography.all-classes();
+
+a { color: getColor(500, accent); }

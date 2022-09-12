@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="toolbar __flex">
+
+  <button mat-button (click)="opened = !opened" class="mat-noradius">
+    <i class="mat-ico __flex/centred/auto"> menu </i>
+  </button>
+
+  <h1> Me.project </h1>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened">
+    <p> sidenav </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
