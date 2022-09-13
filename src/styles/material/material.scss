@@ -8,9 +8,6 @@
 @import './layout/material-icons';
 @import './material-components';
 
-html, body { height: 100%; }
-* { margin: 0; padding: 0; }
-
 @include mat.core();
 
 // Create the theme object. A theme consists of configurations for individual

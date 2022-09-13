@@ -1,0 +1,76 @@
+@use 'src/styles/material/material' as base;
+
+.docs {
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .text {
+    max-width: 720px;
+    gap: 1rem;
+
+    padding: 2rem;
+    box-sizing: border-box;
+
+    border: solid 1px;
+    border-color: transparent base.getColor();
+
+    line-height: 1.5;
+
+    .section {
+      gap: 1rem;
+
+      .code-txt {
+        font-family: 'Courier New', Courier, monospace;
+
+        padding: .125rem .25rem;
+        background-color: base.getColor(100, accent);
+      }
+
+      .code-box {
+        @extend .code-txt;
+
+        * {
+          font-family: 'Courier New', Courier, monospace;
+          font-size: .875rem;
+
+          &.tab {
+            text-indent: 1.5rem;
+          }
+        }
+
+        padding: 1rem;
+
+      }
+
+      .evidence {
+        font-style: italic;
+      }
+
+      .list {
+        .line {
+          font-size: .875rem;
+
+          .paragraph {
+            &::before {
+              @extend .mat-ico;
+              content: 'chevron_right';
+            }
+          }
+
+          .code-txt {
+            text-align: center;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-top {
+    position: fixed;
+
+    bottom: 1.5rem;
+    right: 2rem;
+  }
+
+}

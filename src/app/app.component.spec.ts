@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular-Material-Customizado'`, () => {
+  it(`should have as title 'Me.project'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular-Material-Customizado');
+    expect(app.title).toEqual('Me.project');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular-Material-Customizado app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Me.project app is running!');
   });
 });

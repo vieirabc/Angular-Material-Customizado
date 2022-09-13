@@ -1,10 +1,6 @@
-/* 1rem == 16px; */
-
 // Sidenav
 .mat-sidenav-container {
-  .mat-sidenav {}
-
-  .mat-sidenav-content {
+  .mat-sidenav-content, .mat-sidenav {
     height: 100vh;
 
     padding-top: 2.5rem;
@@ -21,18 +17,18 @@
     max-height: 2.5rem;
   }
 
-  // Button, Raised-Button, Stroked-Button, Flat-Button
+  // Button, Raised-Button, Stroked-Button, Flat-Button at Toolbar
   .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
     height: 100%;
     min-width: auto;
-    padding: 0 .75rem;
+    padding: 0 1rem;
   }
 }
 
-/* Button */
-
 // Button, Raised-Button, Stroked-Button, Flat-Button
 .mat-button, .mat-raised-button, .mat-stroked-button, .mat-flat-button {
+  padding: .5rem 1rem;
+
   &.mat-noradius {
     border-radius: 0;
   }

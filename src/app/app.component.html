@@ -4,18 +4,18 @@
     <i class="mat-ico __flex/centred/auto"> menu </i>
   </button>
 
-  <h1> Me.project </h1>
+<a routerLink="/"><h1> Me.project </h1></a>
 
 </mat-toolbar>
 
 <mat-sidenav-container>
+
+  <!-- Menu Lateral -->
   <mat-sidenav [(opened)]="opened">
-    <p> sidenav </p>
+    <app-sidenav-menu></app-sidenav-menu>
   </mat-sidenav>
 
   <mat-sidenav-content class="content">
-
     <router-outlet></router-outlet>
-
   </mat-sidenav-content>
 </mat-sidenav-container>

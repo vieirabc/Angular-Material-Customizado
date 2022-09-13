@@ -1,53 +1,56 @@
 @use 'src/styles/material/material' as base;
 
 .home {
-  padding-top: 4rem;
+  height: 100%;
   gap: .75rem;
+
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+
+  background-color: base.getColor(50);
 
   .logotype {
     $size: 4.5rem;
     gap: .25rem;
+
     .solid {
       overflow: hidden;
       width: $size;
       height: $size;
-
-      .moon {
-        background-color: base.getColor(500, accent);
-      }
     }
 
-    .s-left {
+    .m {
+      width: 0;
+      height: 0;
 
-      .div {
-        width: 0;
-        height: 0;
-      }
-      .bottom {
-        border: solid calc($size/2) base.getColor(500, accent);
-        border-top-color: transparent;
-        border-top-width: $size;
-        border-bottom-width: 0;
-      }
+      border: solid calc($size/2) base.getColor(500, accent);
+      border-top-color: transparent;
+      border-top-width: $size;
+      border-bottom-width: 0;
     }
 
-    .s-right {
+    .e {
       gap: .25rem;
       border-radius: 50%;
 
       .moon {
         width: 100%;
         height: 100%;
+
+        background-color: base.getColor(500, accent);
       }
     }
   }
 
+  .title {
+    @extend .mat-display-1;
+  }
+
   .welcome-text {
     max-width: 720px;
-    gap: .75rem;
+    gap: 1rem;
 
     padding: 2rem;
-    padding-top: 3.25rem;
     box-sizing: border-box;
 
     border: solid 1px;
@@ -55,7 +58,13 @@
 
     * {
       line-height: 1.25;
-      text-align: justify;
+      text-align: center;
+    }
+  }
+
+  .github {
+    svg {
+      fill: base.getColor(700);
     }
   }
 }

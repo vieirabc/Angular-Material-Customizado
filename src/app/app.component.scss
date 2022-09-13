@@ -4,6 +4,11 @@
   gap: .5rem;
 
   padding: 0;
+
+  a {
+    color: base.getContrast(900);
+    text-decoration: none;
+  }
 }
 
 .content {
