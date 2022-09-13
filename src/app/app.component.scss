@@ -1,13 +1,20 @@
 @use 'src/styles/material/material' as base;
 
 .toolbar {
-  gap: .5rem;
-
   padding: 0;
 
-  a {
-    color: base.getContrast(900);
-    text-decoration: none;
+  .menu-toolbar {
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    gap: .5rem;
+
+    padding: 0;
+
+    a {
+      color: base.getContrast(900);
+      text-decoration: none;
+    }
   }
 }
 

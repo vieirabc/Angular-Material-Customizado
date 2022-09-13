@@ -1,0 +1,5 @@
+<article [innerHTML]="sect.html" class="article __flex/column"></article>
+
+<section *ngIf="sect.section" class="subsection">
+  <app-article *ngFor="let section of sect.section" [sect]="section" [id]="section.id"></app-article>
+</section>

@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/components/material/material.module';
-import { TemplateModule } from './shared/template/template.module';
+import { TemplateModule } from './shared/components/template/template.module';
 import { ViewsModule } from './views/views.module';
 
 @NgModule({

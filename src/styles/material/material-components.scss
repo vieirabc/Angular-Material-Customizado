@@ -1,6 +1,7 @@
 // Sidenav
 .mat-sidenav-container {
   .mat-sidenav-content, .mat-sidenav {
+    overflow-y: hidden;
     height: 100vh;
 
     padding-top: 2.5rem;

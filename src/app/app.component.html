@@ -1,11 +1,15 @@
-<mat-toolbar color="primary" class="toolbar __flex">
+<mat-toolbar color="primary" class="toolbar __flex/centred">
+  <nav class="menu-toolbar __flex/centred">
 
-  <button mat-button (click)="opened = !opened" class="mat-noradius">
-    <i class="mat-ico __flex/centred/auto"> menu </i>
-  </button>
+    <button mat-button (click)="opened = !opened" class="mat-noradius">
+      <i class="mat-ico __flex/centred/auto"> menu </i>
+    </button>
 
-<a routerLink="/"><h1> Me.project </h1></a>
+    <a routerLink="/"><h1> Me.project </h1></a>
 
+    <span class="__flex/auto"></span>
+
+  </nav>
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -15,7 +19,11 @@
     <app-sidenav-menu></app-sidenav-menu>
   </mat-sidenav>
 
-  <mat-sidenav-content class="content">
+  <mat-sidenav-content #content class="content">
     <router-outlet></router-outlet>
+
+    <span class="scroll-rail">
+      <div class="scroll-bar"></div>
+    </span>
   </mat-sidenav-content>
 </mat-sidenav-container>
